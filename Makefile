@@ -1,5 +1,5 @@
 CXX = g++
-CXXFLAGS = -Wall -Werror 
+CXXFLAGS = -Wall -Werror -g 
 LIBS = -lsfml-system -lsfml-audio -lsfml-graphics -lsfml-window 
 INCLUDE_DIR = include
 
@@ -19,9 +19,6 @@ $(EXEC): $(OBJS)
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	mkdir -p $(OBJ_DIR)
 	$(CXX) -c $< -o $@ -I$(INCLUDE_DIR)
-
-debug:
-	# ingresar las directrices necesarias para compilar para debugiar
 
 clean:
 	rm -f $(OBJS) $(EXEC)
