@@ -2,6 +2,8 @@
 #include <SFML/Graphics.hpp>
 #include <WindowElements.hpp>
 #include <Music.hpp>
+#include <thread>
+#include <chrono>
 #include <iostream>
 
 int main() {
@@ -41,6 +43,8 @@ int main() {
 		window.draw(nextSong);
 		window.draw(previousSong);
 		window.display();
+
+		std::this_thread::sleep_for(std::chrono::milliseconds(10));
 	}	
     return 0;
 }
