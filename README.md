@@ -38,7 +38,7 @@ FreePlayOS is designed to be a free and versatile operating system, offering a r
     ```bash
     sudo apt-get install libsfml-dev
     ```
-    The previous command works for linux based distributions, if the previous step does not work or you have problems you can consult the [official page of sfml](https://www.sfml-dev.org/download.php)
+    The previous command works for debian based distributions, if the previous step does not work or you have problems you can consult the [official page of sfml](https://www.sfml-dev.org/download.php)
  
 3. Compile the source code:
     ```bash
