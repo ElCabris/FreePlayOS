@@ -1,5 +1,6 @@
 CXX = g++
-CXXFLAGS = -Wall -Werror -g 
+CXXVERSION := -std=c++17
+CXXFLAGS = -Wall -Werror -g $(CXXVERSION)
 LIBS = -lsfml-system -lsfml-audio -lsfml-graphics -lsfml-window 
 INCLUDE_DIR = include
 
@@ -18,7 +19,7 @@ $(EXEC): $(OBJS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp
 	mkdir -p $(OBJ_DIR)
-	$(CXX) -c $< -o $@ -I$(INCLUDE_DIR)
+	$(CXX) -c $< -o $@ -I$(INCLUDE_DIR) $(CXXFLAGS)
 
 clean:
 	rm -f $(OBJS) $(EXEC)

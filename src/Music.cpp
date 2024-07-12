@@ -24,7 +24,8 @@ void MusicPlayer::pause() {
 
 void MusicPlayer::next() {
 	actual_song++;
-	if (actual_song >= songs.size()) actual_song = 0;
+	int size = songs.size();
+	if (actual_song >= size) actual_song = 0;
 	openSong(songs[actual_song]);
 	play();
 }
